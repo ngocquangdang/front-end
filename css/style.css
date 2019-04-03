@@ -244,11 +244,14 @@ body {
     color: white;
     font-size: 13px; }
   .about-content button {
+    background: none;
+    border: none;
     border: 1px solid #e9990e54;
     border-radius: 2px;
-    background: none;
     color: white;
+    outline: none;
     padding: 8px 15px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    width: 8rem; }
 
 /*# sourceMappingURL=style.css.map */
