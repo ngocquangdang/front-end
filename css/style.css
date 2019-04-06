@@ -363,7 +363,7 @@ body {
 .container-it-work {
   display: flex;
   flex-direction: column;
-  height: 40rem;
+  height: 42rem;
   width: 100%; }
 
 .it-work-title {
@@ -429,5 +429,82 @@ body {
     padding: 10px 15px;
     text-transform: uppercase;
     width: 10rem; }
+
+.happy-client {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffc155; }
+
+.container-happy-client {
+  display: flex;
+  flex-direction: column;
+  height: 42rem;
+  width: 100%; }
+
+.client-title {
+  display: block;
+  margin: 5rem 0 1rem 0;
+  padding: 3rem 0; }
+  .client-title .display-4 {
+    display: flex;
+    color: white;
+    justify-content: center;
+    font-size: 18pt;
+    margin: 0;
+    text-transform: uppercase; }
+  .client-title p {
+    display: flex;
+    color: white;
+    justify-content: center;
+    font-size: 12pt;
+    margin-top: 0; }
+
+.info-client {
+  margin: 0 15% 1rem;
+  color: gray;
+  display: flex; }
+
+.col-1-info-client {
+  display: block; }
+  .col-1-info-client .col-1 {
+    display: flex;
+    background-color: white;
+    height: 10rem;
+    width: 25rem;
+    margin: 0 1rem 1rem 0;
+    padding: 0.5rem 1rem;
+    flex-grow: 1; }
+
+.col-2-info-client {
+  display: block; }
+  .col-2-info-client .col-2 {
+    display: flex;
+    background-color: white;
+    height: 10rem;
+    width: 25rem;
+    margin: 0 0 1rem 1rem;
+    padding: 0.5rem 1rem;
+    flex-grow: 1; }
+
+.avatar-client {
+  padding: 1rem; }
+  .avatar-client .avatar {
+    border: 1px solid gray;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%; }
+
+.description-client p {
+  font-size: 13px;
+  color: gray; }
+.description-client .title-name-client {
+  text-transform: uppercase; }
+  .description-client .title-name-client .name-client {
+    color: #d18a0f;
+    font-size: 12.5px; }
+  .description-client .title-name-client .title-client {
+    color: #c0bebe;
+    font-size: 12.5px; }
 
 /*# sourceMappingURL=style.css.map */
