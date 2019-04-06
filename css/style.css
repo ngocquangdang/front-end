@@ -60,7 +60,7 @@ body {
 
 .jumbotron-title {
   display: block;
-  margin: 3.5rem 0 1rem 0; }
+  margin: 5rem 0 1rem 0; }
   .jumbotron-title .display-4 {
     display: flex;
     color: white;
@@ -127,8 +127,8 @@ body {
   .carousel-inner .item {
     position: absolute;
     display: flex;
-    height: 3rem;
     justify-content: center;
+    height: 3rem;
     bottom: 11rem; }
     .carousel-inner .item img {
       height: 17.5rem;
@@ -148,7 +148,7 @@ body {
 
 .service-title {
   display: block;
-  margin: 3.5rem 0 1rem 0; }
+  margin: 5rem 0 1rem 0; }
   .service-title .display-4 {
     display: flex;
     color: #3f3d3d;
@@ -253,5 +253,181 @@ body {
     padding: 8px 15px;
     text-transform: uppercase;
     width: 8rem; }
+
+.choose-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #e7edf3; }
+
+.container-price {
+  display: flex;
+  flex-direction: column;
+  height: 40rem;
+  width: 100%; }
+
+.price-title {
+  display: block;
+  margin: 5rem 0 1rem 0; }
+  .price-title .display-4 {
+    display: flex;
+    color: black;
+    justify-content: center;
+    font-size: 18pt;
+    margin: 0;
+    text-transform: uppercase; }
+  .price-title p {
+    display: flex;
+    color: black;
+    justify-content: center;
+    font-size: 12pt;
+    margin-top: 0; }
+
+.price-option {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #ffffff;
+  align-items: center;
+  margin: 2rem 15% 5rem; }
+
+.option-basic {
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+  width: 100%;
+  background-color: #ffffff;
+  color: #c4c2c2;
+  flex-grow: 1; }
+  .option-basic .display-3 {
+    display: flex;
+    justify-content: center;
+    font-weight: 50;
+    text-transform: uppercase; }
+  .option-basic .basic-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .option-basic .basic-price .price {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      color: #ffc155; }
+      .option-basic .basic-price .price .fa-dollar-sign {
+        font-size: 1.5rem; }
+      .option-basic .basic-price .price span {
+        font-size: 3.5rem;
+        font-weight: 300; }
+    .option-basic .basic-price span {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      font-size: 12.5px;
+      text-transform: uppercase; }
+  .option-basic .benifit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 1rem; }
+    .option-basic .benifit span {
+      border-top: 1px solid gray;
+      padding: 0.4rem;
+      font-size: 12.5px;
+      text-transform: uppercase; }
+  .option-basic .option-submit {
+    display: flex;
+    justify-content: center; }
+    .option-basic .option-submit button {
+      border: none;
+      border-radius: 3px;
+      background-color: #ffc155;
+      color: white;
+      outline: none;
+      padding: 8px 15px;
+      text-transform: uppercase;
+      width: 8rem; }
+
+.option-active {
+  background-color: #709dca;
+  transform: scale(1.1, 1.4);
+  border-radius: 3px; }
+
+.it-work {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white; }
+
+.container-it-work {
+  display: flex;
+  flex-direction: column;
+  height: 40rem;
+  width: 100%; }
+
+.it-work-title {
+  display: block;
+  margin: 5rem 0 1rem 0;
+  padding: 3rem 0; }
+  .it-work-title .display-4 {
+    display: flex;
+    color: black;
+    justify-content: center;
+    font-size: 18pt;
+    margin: 0;
+    text-transform: uppercase; }
+  .it-work-title p {
+    display: flex;
+    color: black;
+    justify-content: center;
+    font-size: 12pt;
+    margin-top: 0; }
+
+.it-work-step {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #ffffff;
+  margin: 0 15% 1rem;
+  color: gray; }
+
+.step-1 {
+  display: block;
+  height: 19rem;
+  width: 13rem;
+  flex-grow: 1; }
+
+.step-1-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .step-1-icon img {
+    height: 9.5rem;
+    width: 9.5rem; }
+
+.step-1-description span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  text-transform: uppercase; }
+.step-1-description p {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.it-work-submit {
+  display: flex;
+  justify-content: center; }
+  .it-work-submit button {
+    border: none;
+    border-radius: 3px;
+    background-color: #ffc155;
+    color: white;
+    outline: none;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    width: 10rem; }
 
 /*# sourceMappingURL=style.css.map */

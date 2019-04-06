@@ -4,24 +4,43 @@ $bg-about-us: #ffc155;
 $bg-choose-price: #e7edf3;
 
 //  --format : định dạng thẻ chính
-@mixin format($flex-direction,$justify-content,$bg-color) {
+@mixin display-flex-just-bg_color($flex-direction, $justify-content,$bg-color) {
     display: flex;
     flex-direction: $flex-direction;
     justify-content: $justify-content;
     background-color: $bg-color;
 }
+@mixin display-just($display, $justify-content) {
+    display: $display;
+    justify-content: $justify-content;
+}
+@mixin display-flex-just( $display, $flex-direction, $justify-content) {
+    display: $display;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+}
+@mixin display-just-align($display, $justify-content, $align-item) {
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-item;
+}
+@mixin display-flex-just-align( $display, $flex-direction, $justify-content, $align-item) {
+    display: $display;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-item;
+}
 //  --container : định dạng component cha trong thẻ chính
-@mixin container($flex-direction,$height, $width) {
+@mixin container($flex-direction, $height, $width) {
     display: flex;
     flex-direction: $flex-direction;
-    // align-items: center;
     height: $height;
     width: $width;  
 }
 //  --title: định dạng tiêu đề
 @mixin title($color) {
     display: block;
-    margin: 3.5rem 0 1rem 0;
+    margin: 5rem 0 1rem 0;
     .display-4{
         display: flex;
         color: $color;
@@ -42,11 +61,11 @@ body{
     margin: 0;
 }
 .wrapper{
-    @include format(column, static, white)
+    @include display-flex-just-bg_color(column, static, white)
 }
 //  start header
 .navbar{
-    @include format(row, center, #ffffff);
+    @include display-flex-just-bg_color(row, center, #ffffff);
     .container-navbar{
         @include container( row, 4.5rem, 70%);
         .navbar-header{
@@ -93,7 +112,7 @@ body{
 
 // --start  jumbotron
 .jumbotron{
-    @include format(column, static, #709dca);
+    @include display-flex-just-bg_color(column, static, #709dca);
 }
 .container-jumbotron{
    @include container(column, 28.5rem, 100%);  
@@ -104,8 +123,7 @@ body{
 .jumbotron-request{
     display: block;
     form{
-        display: flex;
-        justify-content: center;
+        @include display-just(flex, center);
         .input-group{
             position: relative;
             padding-right: 0.5rem;
@@ -147,23 +165,20 @@ body{
     }
 }
 .slider{
-    @include format(column, static, white);
+    @include display-flex-just-bg_color(column, static, white);
 }
 .carousel{
     @include container(column, 5rem, 100%);
     align-items: center;
 }  
 .carousel-inner{ 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include display-just-align(flex, center, center);
     position: relative; 
     
     .item{
         position: absolute;
-        display: flex;
+        @include display-just(flex, center);
         height: 3rem;
-        justify-content: center; 
         bottom: 11rem;
         img{
             height: 17.5rem;
@@ -209,7 +224,7 @@ body{
     }
 }
 .container{
-    @include format(column, center, $bg); 
+    @include display-flex-just-bg_color(column, center, $bg); 
 }
 .container-service{
     @include container(column, 37rem, 100%);
@@ -220,7 +235,7 @@ body{
 }
 // service-2-col
 .service-2-col{
-    @include format(row, space-between, $bg);
+    @include display-flex-just-bg_color(row, space-between, $bg);
     margin: 0 15% 1rem;
     flex-grow: 1;
     .col-1{
@@ -235,7 +250,7 @@ body{
 //-----------------------------------------------------------
 // -- start about us
 .about-us{
-    @include format(row, static, $bg-about-us);
+    @include display-flex-just-bg_color(row, static, $bg-about-us);
     height: 30rem;
     flex-grow: 1;
 }
@@ -246,9 +261,7 @@ body{
     }
 }
 .about-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include display-flex-just(flex, column, center);
     margin: 0 14% 0 4rem;
     span{
         color: white;
@@ -270,5 +283,141 @@ body{
         padding: 8px 15px;
         text-transform: uppercase;
         width: 8rem;
+    }
+}
+// --end about-us
+
+//-------------------------------------------------------------
+// -- start price
+.choose-price{
+    @include display-flex-just-bg_color(row, center, $bg-choose-price);
+}
+.container-price{
+    @include container(column, 40rem, 100%);
+}
+.price-title{
+    @include title(black);
+}
+.price-option{
+    @include display-flex-just-bg_color(row, center, $bg);
+    align-items: center;
+    margin: 2rem 15% 5rem;
+   
+}
+.option-basic{
+    @include container(column, 20rem, 100%);
+    background-color: $bg;
+    color: rgb(196, 194, 194);
+    flex-grow: 1;
+    .display-3{
+        @include display-just(flex, center);
+        font-weight: 50;
+        text-transform: uppercase;
+    }
+    .basic-price{
+        @include display-flex-just-align(flex, column, center, center);
+        .price{  
+            @include display-flex-just(flex, row, center);
+            color: #ffc155;
+            .fa-dollar-sign{
+                font-size: 1.5rem;
+            }
+            span{
+                font-size: 3.5rem;
+                font-weight: 300;
+            }
+        }
+        span{
+            @include display-flex-just(flex, row, center);
+            font-size: 12.5px;
+            text-transform: uppercase;
+        }
+    }
+    .benifit{
+        @include display-flex-just-align(flex, column, center, center);
+        margin: 1.5rem 1rem;
+        span{
+            border-top: 1px solid gray;
+            padding: 0.4rem ;
+            font-size: 12.5px;
+            text-transform: uppercase;
+        }
+    }
+    .option-submit{
+        @include display-just(flex, center);
+        button{
+            border: none;
+            border-radius: 3px;
+            background-color: #ffc155;
+            color: white;   
+            outline: none;
+            padding: 8px 15px;
+            text-transform: uppercase;
+            width: 8rem;
+        }
+    }
+}
+.option-active{
+    background-color: #709dca;
+    transform: scale(1.1,1.4);
+    border-radius: 3px;
+}
+
+// -- end price
+//-------------------------------------------------------------
+// --start it-work-it
+.it-work{
+    @include display-flex-just-bg_color(column, center, white);
+}
+.container-it-work{
+    @include container(column, 40rem, 100%);
+    
+}
+.it-work-title{
+    @include title(black);
+    padding: 3rem 0;
+}
+.it-work-step{
+    @include display-flex-just-bg_color(row, space-between, $bg);
+    margin: 0 15% 1rem;
+    color: gray;
+}
+.step-1{
+    display: block;
+    height: 19rem;
+    width: 13rem;
+    flex-grow: 1;
+   
+}
+.step-1-icon{
+    @include display-just-align(flex, center, center);
+    img{
+        height: 9.5rem;
+        width: 9.5rem;
+    }
+}
+.step-1-description{
+    span{
+        @include display-just-align(flex, center, center);
+        font-size: 14px;
+        text-transform: uppercase;
+        
+    }
+    p{
+        @include display-just-align(flex, center, center);
+    }
+}
+.it-work-submit{
+    display: flex;
+    justify-content: center;
+    button{
+        border: none;
+        border-radius: 3px;
+        background-color: #ffc155;
+        color: white;   
+        outline: none;
+        padding: 10px 15px;
+        text-transform: uppercase;
+        width: 10rem;
     }
 }
