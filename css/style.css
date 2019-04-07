@@ -76,7 +76,8 @@ body {
     margin-top: 0; }
 
 .jumbotron-request {
-  display: block; }
+  display: block;
+  margin: 0 15%; }
   .jumbotron-request form {
     display: flex;
     justify-content: center; }
@@ -85,12 +86,13 @@ body {
       padding-right: 0.5rem; }
       .jumbotron-request form .input-group input {
         display: block;
-        border: none;
+        border: 1px solid #c3c3c3;
         outline: none;
         border-radius: 3px;
         height: 2.3rem;
         width: 11.5rem;
-        padding: 0 0 0 2.6rem; }
+        padding: 0 0 0 2.6rem;
+        flex-grow: 1 2; }
       .jumbotron-request form .input-group .fas {
         position: absolute;
         color: gray;
@@ -104,7 +106,8 @@ body {
       font-size: 14px;
       text-transform: uppercase;
       border-radius: 3px;
-      width: 10rem; }
+      width: 10rem;
+      flex-grow: 1; }
 
 .slider {
   display: flex;
@@ -506,5 +509,94 @@ body {
   .description-client .title-name-client .title-client {
     color: #c0bebe;
     font-size: 12.5px; }
+
+.new-letter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white; }
+
+.container-new-letter {
+  display: flex;
+  flex-direction: column;
+  height: 50rem;
+  width: 100%; }
+
+.new-letter-title {
+  display: block;
+  margin: 5rem 0 1rem 0;
+  padding: 3rem 0; }
+  .new-letter-title .display-4 {
+    display: flex;
+    color: black;
+    justify-content: center;
+    font-size: 18pt;
+    margin: 0;
+    text-transform: uppercase; }
+  .new-letter-title p {
+    display: flex;
+    color: black;
+    justify-content: center;
+    font-size: 12pt;
+    margin-top: 0; }
+
+.new-letter-request {
+  display: block; }
+  .new-letter-request form {
+    display: flex;
+    justify-content: center; }
+    .new-letter-request form .input-group {
+      position: relative;
+      padding-right: 0.5rem; }
+      .new-letter-request form .input-group input {
+        display: block;
+        border: 1px solid #c3c3c3;
+        outline: none;
+        border-radius: 3px;
+        height: 2.3rem;
+        width: 11.5rem;
+        padding: 0 0 0 2.6rem; }
+      .new-letter-request form .input-group .fas {
+        position: absolute;
+        color: gray;
+        user-select: none;
+        margin: 0.7rem; }
+    .new-letter-request form button {
+      background-color: #ffc155;
+      border: none;
+      color: white;
+      outline: none;
+      font-size: 14px;
+      text-transform: uppercase;
+      border-radius: 3px;
+      width: 10rem; }
+
+.map-address {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 15% 2rem; }
+  .map-address .map {
+    position: relative; }
+    .map-address .map img {
+      height: 100%;
+      width: 100%; }
+  .map-address .address {
+    position: absolute;
+    display: table-row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem; }
+    .map-address .address img {
+      height: 70%;
+      width: 70%;
+      display: table-cell; }
+    .map-address .address span {
+      position: absolute;
+      display: table-cell;
+      z-index: 1; }
+    .map-address .address .logo {
+      height: 3rem;
+      width: 3rem; }
 
 /*# sourceMappingURL=style.css.map */

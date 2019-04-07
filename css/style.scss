@@ -122,20 +122,22 @@ body{
 }
 .jumbotron-request{
     display: block;
+    margin: 0 15%;
     form{
         @include display-just(flex, center);
         .input-group{
             position: relative;
             padding-right: 0.5rem;
+            
             input{
                 display: block;
-                border: none;
+                border: 1px solid rgb(195, 195, 195);
                 outline: none;
                 border-radius: 3px;
                 height: 2.3rem;
                 width: 11.5rem;
                 padding: 0 0 0 2.6rem ; 
-                
+                flex-grow: 1 2;
             }
             // label{
             //     position: absolute;
@@ -161,6 +163,7 @@ body{
             text-transform: uppercase;
             border-radius: 3px;
             width: 10rem;
+            flex-grow: 1;
         }
     }
 }
@@ -491,6 +494,100 @@ body{
         .title-client{
             color: rgb(192, 190, 190);
             font-size: 12.5px;
+        }
+    }
+}
+// -- end client
+//-------------------------------------------------------------
+// -- start letter
+
+.new-letter{
+    @include display-flex-just-bg_color(column, center, white);
+}
+.container-new-letter{
+    @include container(column, 50rem, 100%);
+}
+.new-letter-title{
+    @include title(black);
+    padding: 3rem 0;
+}
+.new-letter-request{
+    display: block;
+    form{
+        @include display-just(flex, center);
+        .input-group{
+            position: relative;
+            padding-right: 0.5rem;
+            input{
+                display: block;
+                border: 1px solid rgb(195, 195, 195);
+                outline: none;
+                border-radius: 3px;
+                height: 2.3rem;
+                width: 11.5rem;
+                padding: 0 0 0 2.6rem ; 
+                
+            }
+            // label{
+            //     position: absolute;
+            //     font-weight: 100;
+            //     color: gray;
+            //     left: 2.5rem;
+            //     top: 1rem;
+            //     pointer-events: none;
+            // }
+            .fas{
+                position: absolute;
+                color: gray;
+                user-select: none;
+                margin: 0.7rem;
+            }
+        }
+        button{
+            background-color: $bg-about-us;
+            border: none;
+            color: white;
+            outline: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            border-radius: 3px;
+            width: 10rem;
+        }
+    }
+}
+.map-address{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 15% 2rem;
+    
+    .map{
+        position: relative;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .address{
+        position: absolute;
+        display: table-row;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        img{
+            height: 70%;
+            width: 70%;
+            display: table-cell;
+            
+        }
+        span{
+            position: absolute;
+            display: table-cell;
+            z-index: 1;
+        }
+        .logo{
+            height: 3rem;
+            width: 3rem;
         }
     }
 }
