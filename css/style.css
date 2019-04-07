@@ -519,8 +519,9 @@ body {
 .container-new-letter {
   display: flex;
   flex-direction: column;
-  height: 50rem;
-  width: 100%; }
+  height: 63rem;
+  width: 100%;
+  margin-bottom: 2rem; }
 
 .new-letter-title {
   display: block;
@@ -639,5 +640,13 @@ body {
     .nav-footer .font-icon .fa-google-plus-g,
     .nav-footer .font-icon .fa-linkedin-in {
       color: #709dca; }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 2.5rem;
+  background-color: #709dca; }
 
 /*# sourceMappingURL=style.css.map */

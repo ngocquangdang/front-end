@@ -505,7 +505,8 @@ body{
     @include display-flex-just-bg_color(column, center, white);
 }
 .container-new-letter{
-    @include container(column, 50rem, 100%);
+    @include container(column, 63rem, 100%);
+    margin-bottom: 2rem;
 }
 .new-letter-title{
     @include title(black);
@@ -628,17 +629,28 @@ body{
     .font-icon{
         display: flex;
         justify-content: center;
-            .fab{
-                margin-right: 2px;
-                padding: 3px;
-            }
-            .fa-twitter{
-                color: #d18a0f;
-            }
-            .fa-facebook-f,
-            .fa-google-plus-g,
-            .fa-linkedin-in{
-                color: #709dca;
-            }
+        .fab{
+            margin-right: 2px;
+            padding: 3px;
+        }
+        .fa-twitter{
+            color: #d18a0f;
+        }
+        .fa-facebook-f,
+        .fa-google-plus-g,
+        .fa-linkedin-in{
+            color: #709dca;
+        }
     }
+}
+// -- end letter
+//-------------------------------------------------------------
+// -- start footer
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 2.5rem;
+    background-color: #709dca;
 }
