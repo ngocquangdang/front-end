@@ -599,4 +599,45 @@ body {
       height: 3rem;
       width: 3rem; }
 
+.nav-footer {
+  margin: 2rem 15% 2rem;
+  border-top: 1px solid gray; }
+  .nav-footer .nav-foot {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 1rem; }
+    .nav-footer .nav-foot li {
+      padding: 8px 15px;
+      margin-right: 1px;
+      font-size: 10.5px;
+      font-weight: 100;
+      color: gray;
+      list-style: none;
+      text-decoration: none;
+      text-transform: uppercase; }
+  .nav-footer .phone-number {
+    display: flex;
+    justify-content: center; }
+    .nav-footer .phone-number .fa-phone {
+      padding: 2px;
+      margin: 6px 0; }
+    .nav-footer .phone-number li {
+      padding: 8px 15px;
+      font-size: 18px;
+      color: #615e5e;
+      list-style: none;
+      text-decoration: none; }
+  .nav-footer .font-icon {
+    display: flex;
+    justify-content: center; }
+    .nav-footer .font-icon .fab {
+      margin-right: 2px;
+      padding: 3px; }
+    .nav-footer .font-icon .fa-twitter {
+      color: #d18a0f; }
+    .nav-footer .font-icon .fa-facebook-f,
+    .nav-footer .font-icon .fa-google-plus-g,
+    .nav-footer .font-icon .fa-linkedin-in {
+      color: #709dca; }
+
 /*# sourceMappingURL=style.css.map */

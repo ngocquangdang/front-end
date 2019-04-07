@@ -591,3 +591,54 @@ body{
         }
     }
 }
+.nav-footer{
+    margin: 2rem 15% 2rem;
+    border-top: 1px solid gray;
+    .nav-foot{
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0 1rem;
+        li{
+            padding: 8px 15px;
+            margin-right: 1px;
+            font-size: 10.5px;
+            font-weight: 100;
+            color: gray;
+            list-style: none;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+    .phone-number{
+        display: flex;
+        justify-content: center;
+        .fa-phone{
+            padding: 2px;
+            margin: 6px 0;
+        }
+        li{
+            padding: 8px 15px;
+            font-size: 18px;
+            color: rgb(97, 94, 94);
+            list-style: none;
+            text-decoration: none;
+           
+        }
+    }
+    .font-icon{
+        display: flex;
+        justify-content: center;
+            .fab{
+                margin-right: 2px;
+                padding: 3px;
+            }
+            .fa-twitter{
+                color: #d18a0f;
+            }
+            .fa-facebook-f,
+            .fa-google-plus-g,
+            .fa-linkedin-in{
+                color: #709dca;
+            }
+    }
+}
