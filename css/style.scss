@@ -37,6 +37,30 @@ $bg-choose-price: #e7edf3;
     height: $height;
     width: $width;  
 }
+// --button
+@mixin buttom {
+    background-color: $bg-about-us;
+    border: none;
+    color: white;
+    outline: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+}
+
+// -- li
+@mixin li {
+    padding: 8px 15px;
+    border-radius: 3px;
+    margin-right: 1px;
+    font-size: 10.5px;
+    font-weight: 100;
+    color: gray;
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
 //  --title: định dạng tiêu đề
 @mixin title($color) {
     display: block;
@@ -75,24 +99,13 @@ body{
             width: 7%;
         }
         .navbar-collapse{   
-            display: flex;
+            @include display-just-align(flex, flex-end, center);
             width: 100%;
-            justify-content: flex-end;
-            align-items: center;
-            
             .navbar-item{
                 display: flex;
                            
                 li{
-                    padding: 8px 15px;
-                    border-radius: 3px;
-                    margin-right: 1px;
-                    font-size: 10.5px;
-                    font-weight: 100;
-                    color: gray;
-                    list-style: none;
-                    text-decoration: none;
-                    text-transform: uppercase;
+                    @include li();
                     &:hover {
                         background-color: $bg-about-us;
                         color: $bg;
@@ -155,15 +168,16 @@ body{
             }
         }
         button{
-            background-color: $bg-about-us;
-            border: none;
-            color: white;
-            outline: none;
-            font-size: 14px;
-            text-transform: uppercase;
-            border-radius: 3px;
-            width: 10rem;
-            flex-grow: 1;
+            // background-color: $bg-about-us;
+            // border: none;
+            // color: white;
+            // outline: none;
+            // font-size: 14px;
+            // text-transform: uppercase;
+            // border-radius: 3px;
+            // width: 10rem;
+            // flex-grow: 1;
+            @include buttom();
         }
     }
 }
@@ -255,10 +269,10 @@ body{
 .about-us{
     @include display-flex-just-bg_color(row, static, $bg-about-us);
     height: 30rem;
-    flex-grow: 1;
 }
 .about-image{
     display: block;
+    flex: 1;
     img{
         height: 30rem;
     }
@@ -266,6 +280,7 @@ body{
 .about-content{
     @include display-flex-just(flex, column, center);
     margin: 0 14% 0 4rem;
+    flex: 1;
     span{
         color: white;
         font-size: 22px;
@@ -277,14 +292,17 @@ body{
         font-size: 13px;
     }
     button{
-        background: none;
-        border: none;
-        border: 1px solid #e9990e54;
-        border-radius: 2px;
-        color: white;
-        outline: none;
-        padding: 8px 15px;
-        text-transform: uppercase;
+        // background: none;
+        // border: none;
+        // border: 1px solid #e9990e54;
+        // border-radius: 2px;
+        // color: white;
+        // outline: none;
+        // padding: 8px 15px;
+        // text-transform: uppercase;
+        // width: 8rem;
+        @include buttom();
+        border: 1px solid #e9990e54;    
         width: 8rem;
     }
 }
@@ -305,21 +323,22 @@ body{
     @include display-flex-just-bg_color(row, center, $bg);
     align-items: center;
     margin: 2rem 15% 5rem;
-   
+    padding: 0;
 }
-.option-basic{
-    @include container(column, 20rem, 100%);
+.option{
+    @include container(column, 23rem, 100%);
     background-color: $bg;
     color: rgb(196, 194, 194);
     flex-grow: 1;
+    
     .display-3{
         @include display-just(flex, center);
         font-weight: 50;
         text-transform: uppercase;
     }
-    .basic-price{
+    .price{
         @include display-flex-just-align(flex, column, center, center);
-        .price{  
+        .price-icon{  
             @include display-flex-just(flex, row, center);
             color: #ffc155;
             .fa-dollar-sign{
@@ -349,22 +368,33 @@ body{
     .option-submit{
         @include display-just(flex, center);
         button{
-            border: none;
-            border-radius: 3px;
-            background-color: #ffc155;
-            color: white;   
-            outline: none;
-            padding: 8px 15px;
-            text-transform: uppercase;
-            width: 8rem;
+            // border: none;
+            // border-radius: 3px;
+            // background-color: #ffc155;
+            // color: white;   
+            // outline: none;
+            // padding: 8px 15px;
+            // text-transform: uppercase;
+            // width: 8rem;
+            @include buttom();
         }
     }
+    &::nth-child(2){
+        background-color: #709dca;
+        transform: scale(1.1,1.2);
+        border-radius: 3px;
+    }
+    &:hover::nth-child(1) + .option{
+        background-color: #709dca;
+        transform: scale(1.1,1.2);
+        border-radius: 3px;
+    }
 }
-.option-active{
-    background-color: #709dca;
-    transform: scale(1.1,1.4);
-    border-radius: 3px;
-}
+// .option-active{
+//     background-color: #709dca;
+//     transform: scale(1.1,1.2);
+//     border-radius: 3px;
+// }
 
 // -- end price
 //-------------------------------------------------------------
@@ -414,14 +444,15 @@ body{
     display: flex;
     justify-content: center;
     button{
-        border: none;
-        border-radius: 3px;
-        background-color: #ffc155;
-        color: white;   
-        outline: none;
-        padding: 10px 15px;
-        text-transform: uppercase;
-        width: 10rem;
+        // border: none;
+        // border-radius: 3px;
+        // background-color: #ffc155;
+        // color: white;   
+        // outline: none;
+        // padding: 10px 15px;
+        // text-transform: uppercase;
+        // width: 10rem;
+        @include buttom();
     }
 }
 
@@ -443,7 +474,7 @@ body{
 .info-client{
     margin: 0 15% 1rem;
     color: gray;
-    display: flex;
+    @include display-just-align(flex, center, center);
 }
 .col-1-info-client{
     display: block;
@@ -545,20 +576,20 @@ body{
             }
         }
         button{
-            background-color: $bg-about-us;
-            border: none;
-            color: white;
-            outline: none;
-            font-size: 14px;
-            text-transform: uppercase;
-            border-radius: 3px;
-            width: 10rem;
+            // background-color: $bg-about-us;
+            // border: none;
+            // color: white;
+            // outline: none;
+            // font-size: 14px;
+            // text-transform: uppercase;
+            // border-radius: 3px;
+            // width: 10rem;
+            @include buttom();
         }
     }
 }
 .map-address{
-    display: flex;
-    justify-content: center;
+    @include display-just(flex, center);
     margin: 2rem 15% 2rem;
     
     .map{
@@ -570,21 +601,24 @@ body{
     }
     .address{
         position: absolute;
-        display: table-row;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include display-flex-just-align(flex, column, center , center);
         margin-top: 2rem;
-        img{
+        .address-info{
+            @include display-just-align(flex, center, center);
+            img{
             height: 70%;
             width: 70%;
-            display: table-cell;
-            
-        }
-        span{
-            position: absolute;
-            display: table-cell;
-            z-index: 1;
+            display: flex;
+            position: relative;
+            }
+            p{
+                position: absolute;
+                width: 25%;
+                height: 50%;
+                top: 2rem;
+                bottom: 2rem;
+                margin: 0;
+            }
         }
         .logo{
             height: 3rem;
@@ -592,43 +626,45 @@ body{
         }
     }
 }
+
 .nav-footer{
     margin: 2rem 15% 2rem;
     border-top: 1px solid gray;
     .nav-foot{
-        display: flex;
-        justify-content: center;
+        @include display-just(flex, center);
         margin: 2rem 0 1rem;
         li{
-            padding: 8px 15px;
-            margin-right: 1px;
-            font-size: 10.5px;
-            font-weight: 100;
-            color: gray;
-            list-style: none;
-            text-decoration: none;
-            text-transform: uppercase;
+            // padding: 8px 15px;
+            // margin-right: 1px;
+            // font-size: 10.5px;
+            // font-weight: 100;
+            // color: gray;
+            // list-style: none;
+            // text-decoration: none;
+            // text-transform: uppercase;
+            @include li();
         }
     }
     .phone-number{
-        display: flex;
-        justify-content: center;
+        @include display-just(flex, center);
         .fa-phone{
             padding: 2px;
             margin: 6px 0;
         }
         li{
-            padding: 8px 15px;
+            // padding: 8px 15px;
+            // font-size: 18px;
+            // color: rgb(97, 94, 94);
+            // list-style: none;
+            // text-decoration: none;
+            @include li();
             font-size: 18px;
             color: rgb(97, 94, 94);
-            list-style: none;
-            text-decoration: none;
            
         }
     }
     .font-icon{
-        display: flex;
-        justify-content: center;
+        @include display-just(flex, center);
         .fab{
             margin-right: 2px;
             padding: 3px;
@@ -647,9 +683,7 @@ body{
 //-------------------------------------------------------------
 // -- start footer
 .footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include display-just-align(flex, center, center);
     color: white;
     height: 2.5rem;
     background-color: #709dca;
