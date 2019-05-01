@@ -1,0 +1,121 @@
+@import "./mixin.css";
+
+.about-us{
+    display: flex;
+}
+.about-image{
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    img{
+        width: 100%;
+        background-size: cover;
+    }
+}
+.about-content{
+    display: flex;
+    background: $bg-about-us;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    .about{  
+        margin: 0 7%; 
+        span{
+            color: white;
+            font-size: 22px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+        p{
+            color: white;
+            font-size: 13px;
+        }
+        button{
+            @include buttom();
+            border: 1px solid #e9990e54;    
+            width: 8rem;
+        }
+    }
+}
+@include mobile{
+    .about-image{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+        img{
+            width: 100%;
+            opacity: 0.5;
+        }
+    }
+    .about-content{
+        position: absolute;
+        background: none;
+        margin-top: 20%;
+        .about{  
+            margin: 0 7%; 
+            span{
+                color: white;
+                font-size: 22px;
+                font-weight: 900;
+                text-transform: uppercase;
+            }
+            p{
+                color: white;
+                font-size: 13px;
+            }
+            button{
+                @include buttom();
+                border: 1px solid #e9990e54;    
+                width: 8rem;
+            }
+        }
+    }
+}
+@include mobile-tablet{
+    .about-image{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+        img{
+            width: 100%;
+            opacity: 0.5;
+        }
+    }
+    .about-content{
+        position: absolute;
+        background: none;
+        margin-top: 20%;
+        .about{  
+            margin: 0 7%; 
+            span{
+                color: white;
+                font-size: 22px;
+                font-weight: 900;
+                text-transform: uppercase;
+            }
+            p{
+                color: white;
+                font-size: 13px;
+            }
+            button{
+                @include buttom();
+                border: 1px solid #e9990e54;    
+                width: 8rem;
+            }
+        }
+    }
+}
+// --end about-us

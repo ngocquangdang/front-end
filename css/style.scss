@@ -83,46 +83,48 @@ body{
 
 //-----------------------------------------------------------
 // -- start about us
-.about-us{
-    @include display-flex-just-bg_color(row, static, $bg-about-us);
-    height: 30rem;
-}
-.about-image{
-    display: block;
-    flex: 1;
-    img{
-        height: 15rem;
-    }
-}
-.about-content{
-    @include display-flex-just(flex, column, center);
-    margin: 0 14% 0 4rem;
-    flex: 1;
-    span{
-        color: white;
-        font-size: 22px;
-        font-weight: 900;
-        text-transform: uppercase;
-    }
-    p{
-        color: white;
-        font-size: 13px;
-    }
-    button{
-        // background: none;
-        // border: none;
-        // border: 1px solid #e9990e54;
-        // border-radius: 2px;
-        // color: white;
-        // outline: none;
-        // padding: 8px 15px;
-        // text-transform: uppercase;
-        // width: 8rem;
-        @include buttom();
-        border: 1px solid #e9990e54;    
-        width: 8rem;
-    }
-}
+// .about-us{
+//     @include display-flex-just-bg_color(row, static, $bg-about-us);
+//     height: 30rem;
+// }
+// .about-image{
+//     display: block;
+//     flex: 1;
+//     img{
+//         height: 15rem;
+//     }
+// }
+// .about-content{
+//     @include display-flex-just(flex, column, center);
+//     margin: 0 14% 0 4rem;
+//     flex: 1;
+//     span{
+//         color: white;
+//         font-size: 22px;
+//         font-weight: 900;
+//         text-transform: uppercase;
+//     }
+//     p{
+//         color: white;
+//         font-size: 13px;
+//     }
+//     button{
+//         // background: none;
+//         // border: none;
+//         // border: 1px solid #e9990e54;
+//         // border-radius: 2px;
+//         // color: white;
+//         // outline: none;
+//         // padding: 8px 15px;
+//         // text-transform: uppercase;
+//         // width: 8rem;
+//         @include buttom();
+//         border: 1px solid #e9990e54;    
+//         width: 8rem;
+//     }
+// }
+
+@import "./aboutUs.scss";
 // --end about-us
 
 //-------------------------------------------------------------
