@@ -1503,19 +1503,18 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #ffffff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
   margin: 0 15% 2rem;
   color: gray;
 }
 
-.step-1 {
+.it-work-step .step-1 {
   display: block;
   height: 19rem;
   width: 13rem;
@@ -1524,47 +1523,14 @@ nav {
           flex-grow: 1;
 }
 
-.step-1-icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.step-1-icon img {
+.it-work-step .step-1-icon img {
   height: 9.5rem;
   width: 9.5rem;
 }
 
-.step-1-description span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.it-work-step .step-1-description span {
   font-size: 14px;
   text-transform: uppercase;
-}
-
-.step-1-description p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .it-work-submit {
@@ -1574,6 +1540,7 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 2rem 0;
 }
 
 .it-work-submit button {
@@ -1642,7 +1609,6 @@ nav {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 2rem 0;
   }
   .it-work-submit button {
     background-color: #ffc155;
@@ -1703,15 +1669,6 @@ nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .it-work-submit {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 2rem 0;
   }
   .it-work-submit button {
     background-color: #ffc155;

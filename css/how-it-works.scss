@@ -11,38 +11,39 @@
     padding: 3rem 0;
 }
 .it-work-step{
-    @include display-flex-just-bg_color(row, space-between, $bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
     margin: 0 15% 2rem;
     color: gray;
-}
-.step-1{
-    display: block;
-    height: 19rem;
-    width: 13rem;
-    flex-grow: 1;
-   
-}
-.step-1-icon{
-    @include display-just-align(flex, center, center);
-    img{
-        height: 9.5rem;
-        width: 9.5rem;
+    .step-1{
+        display: block;
+        height: 19rem;
+        width: 13rem;
+        flex-grow: 1;
+    }
+    .step-1-icon{
+        img{
+            height: 9.5rem;
+            width: 9.5rem;
+        }
+    }
+    .step-1-description{
+        span{
+            font-size: 14px;
+            text-transform: uppercase;  
+        }
+        p{
+            // @include display-just-align(flex, center, center);
+        }
     }
 }
-.step-1-description{
-    span{
-        @include display-just-align(flex, center, center);
-        font-size: 14px;
-        text-transform: uppercase;
-        
-    }
-    p{
-        @include display-just-align(flex, center, center);
-    }
-}
+
 .it-work-submit{
     display: flex;
     justify-content: center;
+    margin: 2rem 0;
     button{
         // border: none;
         // border-radius: 3px;
@@ -88,9 +89,6 @@
     }
     
     .it-work-submit{
-        display: flex;
-        justify-content: center;
-        margin: 2rem 0;
         button{
             @include buttom();
         }
@@ -129,9 +127,6 @@
     }
     
     .it-work-submit{
-        display: flex;
-        justify-content: center;
-        margin: 2rem 0;
         button{
             @include buttom();
         }
