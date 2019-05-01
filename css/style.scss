@@ -22,60 +22,63 @@ body{
 //--------------------------------------------------------------
 
 // -- start container
-@mixin col-service {
-    display: block;
-    .item-service{
-        display: flex;
-        height: 8.5rem;
+// @mixin col-service {
+//     display: block;
+//     .item-service{
+//         display: flex;
+//         height: 8.5rem;
         
-        .icon{
-            align-items: center;
-            width: 7rem;
-            height: auto;
-            img{
-                height: 40px;
-                width: 40px;
-            }
-        }
-        .info{
-            padding: 0 3rem 0 0.5rem;
-            span{
-                color: rgb(85, 81, 81);
-                font-size: 13px;
-                font-weight: 900;
-                text-transform: uppercase;
-            }
-            p{
-                color: gray;
-                margin-bottom: 0; 
-                font-weight: 100;
+//         .icon{
+//             align-items: center;
+//             width: 7rem;
+//             height: auto;
+//             img{
+//                 height: 40px;
+//                 width: 40px;
+//             }
+//         }
+//         .info{
+//             padding: 0 3rem 0 0.5rem;
+//             span{
+//                 color: rgb(85, 81, 81);
+//                 font-size: 13px;
+//                 font-weight: 900;
+//                 text-transform: uppercase;
+//             }
+//             p{
+//                 color: gray;
+//                 margin-bottom: 0; 
+//                 font-weight: 100;
 
-            }
-        }
-    }
-}
-.container{
-    @include display-flex-just-bg_color(column, center, $bg); 
-}
-.container-service{
-    @include container(column, 37rem, 100%);
-}
-// title
-.service-title{
-    @include title(rgb(63, 61, 61));
-}
-// service-2-col
-.service-2-col{
-    @include display-flex-just-bg_color(row, space-between, $bg);
-    margin: 0 15% 1rem;
-    flex-grow: 1;
-    .col-1{
-        @include col-service();
-    }
-    .col-2{
-        @include col-service();
-    }
-}
+//             }
+//         }
+//     }
+// }
+// .container{
+//     @include display-flex-just-bg_color(column, center, $bg); 
+// }
+// .container-service{
+//     @include container(column, 37rem, 100%);
+// }
+// // title
+// .service-title{
+//     @include title(rgb(63, 61, 61));
+// }
+// // service-2-col
+// .service-2-col{
+//     @include display-flex-just-bg_color(row, space-between, $bg);
+//     margin: 0 15% 1rem;
+//     flex-grow: 1;
+//     .col-1{
+//         @include col-service();
+//     }
+//     .col-2{
+//         @include col-service();
+//     }
+// }
+
+
+@import "./container.scss";
 // --end container
 
 //-----------------------------------------------------------
