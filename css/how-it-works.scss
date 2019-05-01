@@ -1,0 +1,139 @@
+@import "./mixin.scss";
+
+.it-work{
+    @include display-flex-just-bg_color(column, center, white);
+}
+.container-it-work{
+    @include container(column, auto, 100%);
+}
+.it-work-title{
+    @include title(black);
+    padding: 3rem 0;
+}
+.it-work-step{
+    @include display-flex-just-bg_color(row, space-between, $bg);
+    margin: 0 15% 2rem;
+    color: gray;
+}
+.step-1{
+    display: block;
+    height: 19rem;
+    width: 13rem;
+    flex-grow: 1;
+   
+}
+.step-1-icon{
+    @include display-just-align(flex, center, center);
+    img{
+        height: 9.5rem;
+        width: 9.5rem;
+    }
+}
+.step-1-description{
+    span{
+        @include display-just-align(flex, center, center);
+        font-size: 14px;
+        text-transform: uppercase;
+        
+    }
+    p{
+        @include display-just-align(flex, center, center);
+    }
+}
+.it-work-submit{
+    display: flex;
+    justify-content: center;
+    button{
+        // border: none;
+        // border-radius: 3px;
+        // background-color: #ffc155;
+        // color: white;   
+        // outline: none;
+        // padding: 10px 15px;
+        // text-transform: uppercase;
+        // width: 10rem;
+        @include buttom();
+    }
+}
+@include mobile{
+    .it-work-step{
+        display: flex;
+        flex-direction: column;
+        margin: 0.5rem 15% 0.5rem;
+        color: gray;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .step-1{
+            display: block;
+            height: 17rem;
+            width: 100%;
+            flex: 1;
+        }
+        .step-1-icon{ 
+            img{
+                height: 7.5rem;
+                width: 7.5rem;
+            }
+        }
+        .step-1-description{
+            span{
+                font-size: 14px;
+                text-transform: uppercase;        
+            }
+            p{
+                @include display-just-align(flex, center, center);
+            }
+        }
+    }
+    
+    .it-work-submit{
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
+        button{
+            @include buttom();
+        }
+    }
+}
+@include mobile-tablet{
+    .it-work-step{
+        display: flex;
+        flex-direction: column;
+        margin: 0.5rem 15% 0.5rem;
+        color: gray;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .step-1{
+            display: block;
+            height: 17rem;
+            width: 100%;
+            flex: 1;
+        }
+        .step-1-icon{ 
+            img{
+                height: 7.5rem;
+                width: 7.5rem;
+            }
+        }
+        .step-1-description{
+            span{
+                font-size: 14px;
+                text-transform: uppercase;        
+            }
+            p{
+                @include display-just-align(flex, center, center);
+            }
+        }
+    }
+    
+    .it-work-submit{
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
+        button{
+            @include buttom();
+        }
+    }
+}
