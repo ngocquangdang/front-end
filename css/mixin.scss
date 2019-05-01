@@ -1,0 +1,110 @@
+$bg: #ffffff;
+$bg-banner-hover: #709dca;
+$bg-about-us: #ffc155;
+$bg-choose-price: #e7edf3;
+
+//  --format : định dạng thẻ chính
+@mixin display-flex-just-bg_color($flex-direction, $justify-content,$bg-color) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    background-color: $bg-color;
+}
+@mixin display-just($display, $justify-content) {
+    display: $display;
+    justify-content: $justify-content;
+}
+@mixin display-flex-just( $display, $flex-direction, $justify-content) {
+    display: $display;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+}
+@mixin display-just-align($display, $justify-content, $align-item) {
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-item;
+}
+@mixin display-flex-just-align( $display, $flex-direction, $justify-content, $align-item) {
+    display: $display;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-item;
+}
+//  --container : định dạng component cha trong thẻ chính
+@mixin container($flex-direction, $height, $width) {
+    display: flex;
+    flex-direction: $flex-direction;
+    height: $height;
+    width: $width;  
+}
+// --button
+@mixin buttom {
+    background-color: $bg-about-us;
+    border: none;
+    color: white;
+    outline: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    height: 2.3rem;
+    width: 14.3rem;
+    padding: 0.5rem 0.5rem;
+}
+
+// -- li
+@mixin li {
+    padding: 8px 15px;
+    border-radius: 3px;
+    margin-right: 1px;
+    font-size: 10.5px;
+    font-weight: 100;
+    color: gray;
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+//  --title: định dạng tiêu đề
+@mixin title($color) {
+    display: block;
+    margin: 5rem 0 1rem 0;
+    .display-4{
+        display: flex;
+        color: $color;
+        justify-content: center;
+        font-size: 18pt;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    p{
+        display: flex;
+        color: $color;
+        justify-content: center;
+        font-size: 12pt;
+        margin-top: 0;
+    }
+}
+
+// -- media query
+$mobile-width: 480px; 
+$tablet-width: 768px; 
+$desktop-width: 1024px; 
+
+@mixin mobile { @media only screen and (max-width: #{$mobile-width - 1px}) {     
+    @content;   
+    } 
+}  
+
+@mixin mobile-tablet { @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {       
+    @content;   
+    } 
+} 
+
+@mixin tablet { @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {       
+    @content;   
+    } 
+}  
+  
+@mixin desktop {  @media (min-width: #{$desktop-width}) {     
+    @content;  
+    } 
+}

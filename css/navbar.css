@@ -1,0 +1,228 @@
+nav {
+  height: 4.5rem;
+  background: #5b78c7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 10%;
+  height: 100%;
+  margin-right: auto;
+  margin-left: 15%;
+}
+
+.navbar-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  width: 65%;
+  height: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  margin-left: auto;
+  margin-right: 15%;
+}
+
+.navbar-item li {
+  padding: 8px 15px;
+  border-radius: 3px;
+  margin-right: 1px;
+  font-size: 10.5px;
+  font-weight: 100;
+  color: gray;
+  list-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+
+.navbar-item li:hover {
+  background-color: #ffc155;
+  color: #ffffff;
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .navbar-header {
+    margin: 0;
+    z-index: 100;
+  }
+  .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+  }
+  nav {
+    position: relative;
+    z-index: 10;
+  }
+  .toggle {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    -webkit-transform: translate(-5%, -50%);
+            transform: translate(-5%, -50%);
+    z-index: 100;
+  }
+  .navbar-item {
+    position: fixed;
+    background: #5b78c7;
+    padding: 0;
+    height: 50vh;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-clip-path: circle(0px at 100% -10%);
+            clip-path: circle(0px at 100% -10%);
+    top: 0;
+    left: 0;
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  .navbar-item.responsive {
+    -webkit-clip-path: circle(1000px at 100% -10%);
+            clip-path: circle(1000px at 100% -10%);
+    pointer-events: all;
+  }
+  .navbar-item li {
+    opacity: 0;
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+  }
+  .navbar-item li:nth-child(1) {
+    -webkit-transition: all 1s ease 0.1s;
+    transition: all 1s ease 0.1s;
+  }
+  .navbar-item li:nth-child(2) {
+    -webkit-transition: all 1s ease 0.2s;
+    transition: all 1s ease 0.2s;
+  }
+  .navbar-item li:nth-child(3) {
+    -webkit-transition: all 1s ease 0.3s;
+    transition: all 1s ease 0.3s;
+  }
+  .navbar-item li:nth-child(4) {
+    -webkit-transition: all 1s ease 0.4s;
+    transition: all 1s ease 0.4s;
+  }
+  .navbar-item li:nth-child(5) {
+    -webkit-transition: all 1s ease 0.5s;
+    transition: all 1s ease 0.5s;
+  }
+  .navbar-item li:nth-child(6) {
+    -webkit-transition: all 1s ease 0.6s;
+    transition: all 1s ease 0.6s;
+  }
+  .navbar-item li:nth-child(7) {
+    -webkit-transition: all 1s ease 0.7s;
+    transition: all 1s ease 0.7s;
+  }
+  .navbar-item li.fade {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .navbar-header {
+    margin: 0;
+    z-index: 100;
+  }
+  .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+  }
+  nav {
+    position: relative;
+    z-index: 10;
+  }
+  .toggle {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    -webkit-transform: translate(-5%, -50%);
+            transform: translate(-5%, -50%);
+    z-index: 100;
+  }
+  .navbar-item {
+    position: fixed;
+    background: #5b78c7;
+    padding: 0;
+    height: 50vh;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-clip-path: circle(0px at 70% -10%);
+            clip-path: circle(0px at 70% -10%);
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  .navbar-item.responsive {
+    -webkit-clip-path: circle(1000px at 70% -10%);
+            clip-path: circle(1000px at 70% -10%);
+    pointer-events: all;
+  }
+  .navbar-item li {
+    opacity: 0;
+    font-size: 0.6rem;
+    text-align: center;
+  }
+  .navbar-item li:nth-child(1) {
+    -webkit-transition: all 1s ease 0.1s;
+    transition: all 1s ease 0.1s;
+  }
+  .navbar-item li:nth-child(2) {
+    -webkit-transition: all 1s ease 0.2s;
+    transition: all 1s ease 0.2s;
+  }
+  .navbar-item li:nth-child(3) {
+    -webkit-transition: all 1s ease 0.3s;
+    transition: all 1s ease 0.3s;
+  }
+  .navbar-item li:nth-child(4) {
+    -webkit-transition: all 1s ease 0.4s;
+    transition: all 1s ease 0.4s;
+  }
+  .navbar-item li:nth-child(5) {
+    -webkit-transition: all 1s ease 0.5s;
+    transition: all 1s ease 0.5s;
+  }
+  .navbar-item li:nth-child(6) {
+    -webkit-transition: all 1s ease 0.6s;
+    transition: all 1s ease 0.6s;
+  }
+  .navbar-item li:nth-child(7) {
+    -webkit-transition: all 1s ease 0.7s;
+    transition: all 1s ease 0.7s;
+  }
+  .navbar-item li.fade {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=navbar.css.map */

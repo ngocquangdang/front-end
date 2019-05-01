@@ -1,0 +1,178 @@
+@import "./mixin.scss";
+nav{
+    height: 4.5rem;
+    background: #5b78c7;
+    display: flex;
+}   
+
+.navbar-header{
+    @include display-just-align(flex, center, center);
+    width: 10%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: 15%;
+}
+.navbar-item{
+    display: flex;
+    list-style: none;
+    width: 65%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    margin-left: auto;  
+    margin-right: 15%;  
+
+    li{
+        @include li();
+        color: white;
+        &:hover {
+            background-color: $bg-about-us;
+            color: $bg;
+        }
+        // &.active{
+        //     background-color: $bg-about-us;
+        //     color: $bg;
+        // }
+    } 
+}
+
+@include mobile-tablet {
+    .navbar-header{
+        margin: 0;
+        z-index: 100;
+    }
+    .line{
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+    }
+    nav{
+        position: relative;
+        z-index: 10;
+    }
+    .toggle {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 100;
+    }
+    .navbar-item{
+        position: fixed;
+        background: #5b78c7;
+        padding: 0;
+        height: 50vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle( 0px at 100% -10%);
+        top: 0;
+        left: 0;
+        transition: all 1s ease-out;
+        pointer-events: none;
+        &.responsive{
+            clip-path: circle(1000px at 100% -10%);
+            pointer-events: all;
+        }
+        li{
+            opacity: 0;
+            font-size: 0.8rem;
+            margin-bottom: 0.3rem;
+            &:nth-child(1){
+                transition: all 1s ease 0.1s;
+            }
+            &:nth-child(2){
+                transition: all 1s ease 0.2s;
+            }
+            &:nth-child(3){
+                transition: all 1s ease 0.3s;
+            }
+            &:nth-child(4){
+                transition: all 1s ease 0.4s;
+            }
+            &:nth-child(5){
+                transition: all 1s ease 0.5s;
+            }
+            &:nth-child(6){
+                transition: all 1s ease 0.6s;
+            }
+            &:nth-child(7){
+                transition: all 1s ease 0.7s;
+            }
+            &.fade{
+                opacity: 1;
+            }
+        }
+    }
+}
+@include mobile{
+    .navbar-header{
+        margin: 0;
+        z-index: 100;
+    }
+    .line{
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+    }
+    nav{
+        position: relative;
+        z-index: 10;
+    }
+    .toggle {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 100;
+    }
+    .navbar-item{
+        position: fixed;
+        background: #5b78c7;
+        padding: 0;
+        height: 50vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(0px at 70% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+        &.responsive{
+            clip-path: circle(1000px at 70% -10%);
+            pointer-events: all;
+        }
+        li{
+            opacity: 0;
+            font-size: 0.6rem;
+            text-align: center;
+            &:nth-child(1){
+                transition: all 1s ease 0.1s;
+            }
+            &:nth-child(2){
+                transition: all 1s ease 0.2s;
+            }
+            &:nth-child(3){
+                transition: all 1s ease 0.3s;
+            }
+            &:nth-child(4){
+                transition: all 1s ease 0.4s;
+            }
+            &:nth-child(5){
+                transition: all 1s ease 0.5s;
+            }
+            &:nth-child(6){
+                transition: all 1s ease 0.6s;
+            }
+            &:nth-child(7){
+                transition: all 1s ease 0.7s;
+            }
+            &.fade{
+                opacity: 1;
+            }
+        }
+    }
+}
+//  end header
