@@ -1,0 +1,202 @@
+@import "./mixin.scss";
+
+@mixin col {
+    display: block;
+    .col{
+        display: flex;
+        background-color: white;
+        height: 10rem;
+        width: 25rem;
+        margin: 0 1rem 1rem 0;
+        padding: 1rem 1rem;
+        flex: 1;
+        .avatar-client{
+            padding: 1rem;
+            display: flex;
+            flex: 1;
+            .avatar{
+                border: 1px solid gray;
+                height: 6.5rem;
+                width: 6.5rem;
+                border-radius: 50%;
+                position: relative;
+                overflow: hidden;
+                img{
+                    width: 150%;
+                    position: absolute;
+                }
+            }
+        }
+        .description-client{
+            flex: 2;
+            p{
+                font-size: 13px;
+                color: gray;
+            }
+            .title-name-client{
+                text-transform: uppercase;
+                .name-client{
+                    color: #d18a0f;
+                    font-size: 12.5px;
+                }
+                .title-client{
+                    color: rgb(192, 190, 190);
+                    font-size: 12.5px;
+                }
+            }
+        }
+    }
+    @include mobile{
+        .col{
+            display: block;
+            background-color: white;
+            height: auto;
+            width: auto;
+            text-align: center;
+            margin: 0;
+            margin-bottom: 1rem;
+            padding: 1rem 1rem;
+            .avatar-client{
+                padding: 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+                .avatar{
+                    border: 1px solid gray;
+                    height: 6.5rem;
+                    width: 6.5rem;
+                    border-radius: 50%;
+                    position: relative;
+                    overflow: hidden;
+                    img{
+                        left: 0;
+                        width: 150%;
+                        position: absolute;
+                    }
+                }
+            }
+            .description-client{
+                p{
+                    font-size: 13px;
+                    color: gray;
+                }
+                .title-name-client{
+                    text-transform: uppercase;
+                    .name-client{
+                        color: #d18a0f;
+                        font-size: 12.5px;
+                    }
+                    .title-client{
+                        color: rgb(192, 190, 190);
+                        font-size: 12.5px;
+                    }
+                }
+            }
+        }
+    }
+    
+    @include mobile-tablet{
+        .col{
+            display: block;
+            background-color: white;
+            height: auto;
+            width: auto;
+            text-align: center;
+            margin: 0;
+            margin-bottom: 1rem;
+            padding: 1rem 1rem;
+            .avatar-client{          
+                padding: 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+                .avatar{
+                    border: 1px solid gray;
+                    height: 6.5rem;
+                    width: 6.5rem;
+                    border-radius: 50%;
+                    position: relative;
+                    overflow: hidden;
+                    img{
+                        left: 0;
+                        width: 150%;
+                        position: absolute;
+                    }
+                }
+            }
+            .description-client{
+                p{
+                    font-size: 13px;
+                    color: gray;
+                }
+                .title-name-client{
+                    text-transform: uppercase;
+                    .name-client{
+                        color: #d18a0f;
+                        font-size: 12.5px;
+                    }
+                    .title-client{
+                        color: rgb(192, 190, 190);
+                        font-size: 12.5px;
+                    }
+                }
+            }
+        }
+    }
+}
+.happy-client{
+    @include display-flex-just-bg_color(column, center, #ffc155);
+}
+.container-happy-client{
+    @include container(column, auto, 100%);
+    
+}
+.client-title{
+    @include title(white);
+    padding: 3rem 0;
+}
+.info-client{
+    margin: 0 15% 2rem;
+    color: gray;
+    @include display-just-align(flex, center, center);
+    .col-1-info-client{
+        @include col();
+    }
+    .col-2-info-client{
+        @include col();
+    }
+}
+
+@include mobile{
+    .client-title{
+        text-align: center;
+    }
+    .info-client{
+        margin: 0 15% 2rem;
+        color: gray;
+        @include display-just-align(block, center, center);
+        .col-1-info-client{
+            @include col();
+        }
+        .col-2-info-client{
+            @include col();
+        }
+    }
+}
+
+@include mobile-tablet{
+    .client-title{
+        text-align: center;
+    }
+    .info-client{
+        margin: 0 15% 2rem;
+        color: gray;
+        @include display-just-align(block, center, center);
+        .col-1-info-client{
+            @include col();
+        }
+        .col-2-info-client{
+            @include col();
+        }
+    }
+}
