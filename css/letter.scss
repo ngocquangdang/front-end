@@ -1,0 +1,343 @@
+@import "./mixin.scss";
+
+.new-letter{
+    @include display-flex-just-bg_color(column, center, white);
+}
+.container-new-letter{
+    @include container(column, auto, 100%);
+    margin-bottom: 2rem;
+}
+.new-letter-title{
+    @include title(black);
+    padding: 3rem 0;
+}
+.new-letter-request{
+    display: block;
+    margin: 0 15%;
+    form{
+        @include display-just-align(flex, center, center);
+        flex-wrap: wrap;
+        .input-group{
+            position: relative;
+            padding: 0.5rem 0.5rem 0.5rem 0;
+            
+            input{
+                display: block;
+                border: 1px solid rgb(195, 195, 195);
+                outline: none;
+                border-radius: 3px;
+                height: 2.3rem;
+                width: 11.5rem;
+                padding: 0 0 0 2.6rem ; 
+                
+            }
+            .fas{
+                position: absolute;
+                color: gray;
+                user-select: none;
+                margin: 0.7rem;
+            }
+        }
+        button{
+
+            @include buttom();
+        }
+    }
+}
+@include mobile-tablet{
+    text-align: center;
+    .new-letter-title{
+        @include title(black);
+        padding: 1.5rem 0;
+    }
+    .new-letter-request{
+        margin: 0 7%;
+        form{
+            display: flex;
+            flex-wrap: wrap;
+            .input-group{
+                padding-right: 0.5rem;
+                input{
+                    height: 2.2rem;
+                    width: 10rem;
+                }
+            }
+            button{
+                margin-right: 0.5rem;
+                font-size: 13px;
+                height: 2.2rem;
+                width: 12.7rem;
+            }
+        }
+    }
+}
+@include mobile{
+    .new-letter-title{
+        @include title(black);
+        padding: 1.5rem 0;
+    }
+    text-align: center;
+    margin: 0 7%;
+    .new-letter-title{
+        @include title(black);
+        padding: 3rem 0;
+    }
+    .new-letter-request{
+        margin: 0 1rem;
+        form{
+            display: flex;
+            flex-wrap: wrap;
+            .input-group{
+                padding-right: 0.5rem;
+                input{
+                    height: 2.2rem;
+                    width: 10rem;
+                }
+            }
+            button{
+                margin-right: 0.5rem;
+                font-size: 13px;
+                height: 2.2rem;
+                width: 12.7rem;
+            }
+        }
+    }
+}
+.map-address{
+    @include display-just(flex, center);
+    margin: 2rem 15% 2rem;
+    text-align: center;
+    .map{
+        position: relative;
+        img{
+            width: 100%;
+        }
+    }
+    .address{
+        position: absolute;
+        @include display-flex-just-align(flex, column, center , center);
+        margin-top: 2.5rem;
+        .address-info{
+            @include display-just-align(flex, center, center);
+            img{
+                width: 70%;
+                display: flex;
+                position: relative;
+            }
+            p{
+                position: absolute;
+                width: 30%;
+                height: 50%;
+                margin: 0;
+            }
+        }
+        .logo{
+            height: 3rem;
+            width: 3rem;
+        }
+    }
+}
+@include mobile-tablet{
+    .map-address{
+        @include display-just(flex, center);
+        margin: 2rem 7% 2rem;
+        text-align: center;
+        .map{
+            position: relative;
+            img{
+                width: 100%;
+            }
+        }
+        .address{
+            position: absolute;
+            @include display-flex-just-align(flex, column, center , center);
+            margin-top: 2.5%;
+            text-align: center;
+            .address-info{
+                @include display-just-align(flex, center, center);
+                width: 90%;
+                img{
+                    width: 52.5%;
+                    position: relative;
+                }
+                p{
+                    position: absolute;
+                    font-size: 90%;
+                    width: 30%;
+                    height: 50%;
+                    margin: 0;
+                }
+            }
+            .logo{
+                height: 2.5rem;
+                width: 2.5rem;
+            }
+        }
+    }
+}
+@include mobile{
+    .map-address{
+        @include display-just(flex, center);
+        margin: 2rem 7% 2rem;
+        text-align: center;
+        .map{
+            position: relative;
+            img{
+                width: 100%;
+            }
+        }
+        .address{
+            position: absolute;
+            @include display-flex-just-align(flex, column, center , center);
+            margin-top: 2.5%;
+            text-align: center;
+            .address-info{
+                @include display-just-align(flex, center, center);
+                width: 90%;
+                
+                img{
+                    width: 52.5%;
+                    position: relative;
+                }
+                p{
+                    position: absolute;
+                    font-size: 80%;
+                    width: 30%;
+                    height: 50%;
+                    margin: 0;
+                }
+            }
+            .logo{
+                height: 2.5rem;
+                width: 2.5rem;
+            }
+        }
+    }
+}
+.nav-footer{
+    margin: 2rem 15% 2rem;
+    border-top: 1px solid gray;
+    .nav-foot{
+        @include display-just(flex, center);
+        margin: 2rem 0 1rem;
+        flex-wrap: wrap;
+        padding: 0;
+        li{
+            @include li();
+        }
+    }
+    .phone-number{
+        @include display-just(flex, center);
+        padding: 0;
+        .fa-phone{
+            padding: 2px;
+            margin: 6px 0;
+        }
+        li{
+            @include li();
+            font-size: 18px;
+            color: rgb(97, 94, 94);
+        }
+    }
+    .font-icon{
+        @include display-just(flex, center);
+        padding: 0;
+        .fab{
+            margin-right: 2px;
+            padding: 3px;
+        }
+        .fa-twitter{
+            color: #d18a0f;
+        }
+        .fa-facebook-f,
+        .fa-google-plus-g,
+        .fa-linkedin-in{
+            color: #709dca;
+        }
+    }
+}
+@include mobile-tablet{
+    .nav-footer{
+        margin: 2rem 10% 2rem;
+        .nav-foot{
+            @include display-just(flex, center);
+            margin: 2rem 0 1rem;
+            li{
+                @include li();
+            }
+        }
+        .phone-number{
+            @include display-just(flex, center);
+            .fa-phone{
+                padding: 2px;
+                margin: 6px 0;
+            }
+            li{
+                
+                @include li();
+                font-size: 18px;
+                color: rgb(97, 94, 94);
+               
+            }
+        }
+        .font-icon{
+            @include display-just(flex, center);
+            .fab{
+                margin-right: 2px;
+                padding: 3px;
+            }
+            .fa-twitter{
+                color: #d18a0f;
+            }
+            .fa-facebook-f,
+            .fa-google-plus-g,
+            .fa-linkedin-in{
+                color: #709dca;
+            }
+        }
+    }
+    
+}
+@include mobile{
+    .nav-footer{
+        margin: 2rem 7% 2rem;
+        .nav-foot{
+            @include display-just(flex, center);
+            margin: 2rem 0 1rem;
+            li{
+                @include li();
+            }
+        }
+        .phone-number{
+            @include display-just(flex, center);
+            .fa-phone{
+                padding: 2px;
+                margin: 6px 0;
+            }
+            li{
+                
+                @include li();
+                font-size: 18px;
+                color: rgb(97, 94, 94);
+               
+            }
+        }
+        .font-icon{
+            @include display-just(flex, center);
+            .fab{
+                margin-right: 2px;
+                padding: 3px;
+            }
+            .fa-twitter{
+                color: #d18a0f;
+            }
+            .fa-facebook-f,
+            .fa-google-plus-g,
+            .fa-linkedin-in{
+                color: #709dca;
+            }
+        }
+    }
+   
+    
+}

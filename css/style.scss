@@ -354,153 +354,155 @@ body{
 //-------------------------------------------------------------
 // -- start letter
 
-.new-letter{
-    @include display-flex-just-bg_color(column, center, white);
-}
-.container-new-letter{
-    @include container(column, 63rem, 100%);
-    margin-bottom: 2rem;
-}
-.new-letter-title{
-    @include title(black);
-    padding: 3rem 0;
-}
-.new-letter-request{
-    display: block;
-    form{
-        @include display-just(flex, center);
-        .input-group{
-            position: relative;
-            padding-right: 0.5rem;
-            input{
-                display: block;
-                border: 1px solid rgb(195, 195, 195);
-                outline: none;
-                border-radius: 3px;
-                height: 2.3rem;
-                width: 11.5rem;
-                padding: 0 0 0 2.6rem ; 
+// .new-letter{
+//     @include display-flex-just-bg_color(column, center, white);
+// }
+// .container-new-letter{
+//     @include container(column, 63rem, 100%);
+//     margin-bottom: 2rem;
+// }
+// .new-letter-title{
+//     @include title(black);
+//     padding: 3rem 0;
+// }
+// .new-letter-request{
+//     display: block;
+//     form{
+//         @include display-just(flex, center);
+//         .input-group{
+//             position: relative;
+//             padding-right: 0.5rem;
+//             input{
+//                 display: block;
+//                 border: 1px solid rgb(195, 195, 195);
+//                 outline: none;
+//                 border-radius: 3px;
+//                 height: 2.3rem;
+//                 width: 11.5rem;
+//                 padding: 0 0 0 2.6rem ; 
                 
-            }
-            // label{
-            //     position: absolute;
-            //     font-weight: 100;
-            //     color: gray;
-            //     left: 2.5rem;
-            //     top: 1rem;
-            //     pointer-events: none;
-            // }
-            .fas{
-                position: absolute;
-                color: gray;
-                user-select: none;
-                margin: 0.7rem;
-            }
-        }
-        button{
-            // background-color: $bg-about-us;
-            // border: none;
-            // color: white;
-            // outline: none;
-            // font-size: 14px;
-            // text-transform: uppercase;
-            // border-radius: 3px;
-            // width: 10rem;
-            @include buttom();
-        }
-    }
-}
-.map-address{
-    @include display-just(flex, center);
-    margin: 2rem 15% 2rem;
+//             }
+//             // label{
+//             //     position: absolute;
+//             //     font-weight: 100;
+//             //     color: gray;
+//             //     left: 2.5rem;
+//             //     top: 1rem;
+//             //     pointer-events: none;
+//             // }
+//             .fas{
+//                 position: absolute;
+//                 color: gray;
+//                 user-select: none;
+//                 margin: 0.7rem;
+//             }
+//         }
+//         button{
+//             // background-color: $bg-about-us;
+//             // border: none;
+//             // color: white;
+//             // outline: none;
+//             // font-size: 14px;
+//             // text-transform: uppercase;
+//             // border-radius: 3px;
+//             // width: 10rem;
+//             @include buttom();
+//         }
+//     }
+// }
+// .map-address{
+//     @include display-just(flex, center);
+//     margin: 2rem 15% 2rem;
     
-    .map{
-        position: relative;
-        img{
-            height: 100%;
-            width: 100%;
-        }
-    }
-    .address{
-        position: absolute;
-        @include display-flex-just-align(flex, column, center , center);
-        margin-top: 2rem;
-        .address-info{
-            @include display-just-align(flex, center, center);
-            img{
-            height: 70%;
-            width: 70%;
-            display: flex;
-            position: relative;
-            }
-            p{
-                position: absolute;
-                width: 25%;
-                height: 50%;
-                top: 2rem;
-                bottom: 2rem;
-                margin: 0;
-            }
-        }
-        .logo{
-            height: 3rem;
-            width: 3rem;
-        }
-    }
-}
+//     .map{
+//         position: relative;
+//         img{
+//             height: 100%;
+//             width: 100%;
+//         }
+//     }
+//     .address{
+//         position: absolute;
+//         @include display-flex-just-align(flex, column, center , center);
+//         margin-top: 2rem;
+//         .address-info{
+//             @include display-just-align(flex, center, center);
+//             img{
+//             height: 70%;
+//             width: 70%;
+//             display: flex;
+//             position: relative;
+//             }
+//             p{
+//                 position: absolute;
+//                 width: 25%;
+//                 height: 50%;
+//                 top: 2rem;
+//                 bottom: 2rem;
+//                 margin: 0;
+//             }
+//         }
+//         .logo{
+//             height: 3rem;
+//             width: 3rem;
+//         }
+//     }
+// }
 
-.nav-footer{
-    margin: 2rem 15% 2rem;
-    border-top: 1px solid gray;
-    .nav-foot{
-        @include display-just(flex, center);
-        margin: 2rem 0 1rem;
-        li{
-            // padding: 8px 15px;
-            // margin-right: 1px;
-            // font-size: 10.5px;
-            // font-weight: 100;
-            // color: gray;
-            // list-style: none;
-            // text-decoration: none;
-            // text-transform: uppercase;
-            @include li();
-        }
-    }
-    .phone-number{
-        @include display-just(flex, center);
-        .fa-phone{
-            padding: 2px;
-            margin: 6px 0;
-        }
-        li{
-            // padding: 8px 15px;
-            // font-size: 18px;
-            // color: rgb(97, 94, 94);
-            // list-style: none;
-            // text-decoration: none;
-            @include li();
-            font-size: 18px;
-            color: rgb(97, 94, 94);
+// .nav-footer{
+//     margin: 2rem 15% 2rem;
+//     border-top: 1px solid gray;
+//     .nav-foot{
+//         @include display-just(flex, center);
+//         margin: 2rem 0 1rem;
+//         li{
+//             // padding: 8px 15px;
+//             // margin-right: 1px;
+//             // font-size: 10.5px;
+//             // font-weight: 100;
+//             // color: gray;
+//             // list-style: none;
+//             // text-decoration: none;
+//             // text-transform: uppercase;
+//             @include li();
+//         }
+//     }
+//     .phone-number{
+//         @include display-just(flex, center);
+//         .fa-phone{
+//             padding: 2px;
+//             margin: 6px 0;
+//         }
+//         li{
+//             // padding: 8px 15px;
+//             // font-size: 18px;
+//             // color: rgb(97, 94, 94);
+//             // list-style: none;
+//             // text-decoration: none;
+//             @include li();
+//             font-size: 18px;
+//             color: rgb(97, 94, 94);
            
-        }
-    }
-    .font-icon{
-        @include display-just(flex, center);
-        .fab{
-            margin-right: 2px;
-            padding: 3px;
-        }
-        .fa-twitter{
-            color: #d18a0f;
-        }
-        .fa-facebook-f,
-        .fa-google-plus-g,
-        .fa-linkedin-in{
-            color: #709dca;
-        }
-    }
-}
+//         }
+//     }
+//     .font-icon{
+//         @include display-just(flex, center);
+//         .fab{
+//             margin-right: 2px;
+//             padding: 3px;
+//         }
+//         .fa-twitter{
+//             color: #d18a0f;
+//         }
+//         .fa-facebook-f,
+//         .fa-google-plus-g,
+//         .fa-linkedin-in{
+//             color: #709dca;
+//         }
+//     }
+// }
+
+@import "./letter.scss";
 // -- end letter
 //-------------------------------------------------------------
 // -- start footer
