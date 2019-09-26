@@ -1,0 +1,370 @@
+.choose-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #e7edf3;
+}
+
+.container-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+
+.price-title {
+  display: block;
+  margin: 5rem 0 1rem 0;
+  text-align: center;
+}
+
+.price-title .display-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: black;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 18pt;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.price-title p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: black;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 12pt;
+  margin-top: 0;
+}
+
+.price-option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #ffffff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 15% 5rem;
+  padding: 0;
+}
+
+.option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 23rem;
+  width: 100%;
+  background-color: #ffffff;
+  color: #c4c2c2;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.option .display-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 50;
+  text-transform: uppercase;
+}
+
+.option .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.option .price .price-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ffc155;
+}
+
+.option .price .price-icon .fa-dollar-sign {
+  font-size: 1.5rem;
+}
+
+.option .price .price-icon span {
+  font-size: 3.5rem;
+  font-weight: 300;
+}
+
+.option .price span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 12.5px;
+  text-transform: uppercase;
+}
+
+.option .benifit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1.5rem 1rem;
+}
+
+.option .benifit span {
+  border-top: 1px solid gray;
+  padding: 0.4rem;
+  font-size: 12.5px;
+  text-transform: uppercase;
+}
+
+.option .option-submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.option .option-submit button {
+  background-color: #ffc155;
+  border: none;
+  color: white;
+  outline: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  height: 2.3rem;
+  width: 14.3rem;
+  padding: 0.5rem 0.5rem;
+}
+
+.option::nth-child(2) {
+  background-color: #709dca;
+  -webkit-transform: scale(1.1, 1.2);
+          transform: scale(1.1, 1.2);
+  border-radius: 3px;
+}
+
+.option:hover::nth-child(1) + .option {
+  background-color: #709dca;
+  -webkit-transform: scale(1.1, 1.2);
+          transform: scale(1.1, 1.2);
+  border-radius: 3px;
+}
+
+@media only screen and (max-width: 479px) {
+  .price-option {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #ffffff;
+    display: block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 2rem 15% 5rem;
+    padding: 0;
+  }
+  .price-option .option {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 23rem;
+    width: 100%;
+    background-color: #ffffff;
+    color: #c4c2c2;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    margin-bottom: 0.5rem;
+  }
+  .price-option .option .display-3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-weight: 50;
+    text-transform: uppercase;
+  }
+  .price-option .option .price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .price-option .option .price .price-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #ffc155;
+  }
+  .price-option .option .price .price-icon .fa-dollar-sign {
+    font-size: 1.5rem;
+  }
+  .price-option .option .price .price-icon span {
+    font-size: 3.5rem;
+    font-weight: 300;
+  }
+  .price-option .option .price span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 12.5px;
+    text-transform: uppercase;
+  }
+  .price-option .option .benifit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 1.5rem 1rem;
+  }
+  .price-option .option .benifit span {
+    border-top: 1px solid gray;
+    padding: 0.4rem;
+    font-size: 12.5px;
+    text-transform: uppercase;
+  }
+  .price-option .option .option-submit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .price-option .option .option-submit button {
+    background-color: #ffc155;
+    border: none;
+    color: white;
+    outline: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    height: 2.3rem;
+    width: 14.3rem;
+    padding: 0.5rem 0.5rem;
+  }
+  .price-option .option::nth-child(2) {
+    background-color: #709dca;
+    -webkit-transform: scale(1.1, 1.2);
+            transform: scale(1.1, 1.2);
+    border-radius: 3px;
+  }
+  .price-option .option:hover::nth-child(1) + .option {
+    background-color: #709dca;
+    -webkit-transform: scale(1.1, 1.2);
+            transform: scale(1.1, 1.2);
+    border-radius: 3px;
+  }
+}
+/*# sourceMappingURL=price.css.map */

@@ -1,0 +1,161 @@
+@import "./mixin.scss";
+
+.choose-price{
+    @include display-flex-just-bg_color(row, center, $bg-choose-price);
+}
+.container-price{
+    @include container(column, auto, 100%);
+}
+.price-title{
+    @include title(black);
+}
+.price-option{
+    @include display-flex-just-bg_color(row, center, $bg);
+    align-items: center;
+    margin: 2rem 15% 5rem;
+    padding: 0;
+}
+.option{
+    @include container(column, 23rem, 100%);
+    background-color: $bg;
+    color: rgb(196, 194, 194);
+    flex-grow: 1;
+    
+    .display-3{
+        @include display-just(flex, center);
+        font-weight: 50;
+        text-transform: uppercase;
+    }
+    .price{
+        @include display-flex-just-align(flex, column, center, center);
+        .price-icon{  
+            @include display-flex-just(flex, row, center);
+            color: #ffc155;
+            .fa-dollar-sign{
+                font-size: 1.5rem;
+            }
+            span{
+                font-size: 3.5rem;
+                font-weight: 300;
+            }
+        }
+        span{
+            @include display-flex-just(flex, row, center);
+            font-size: 12.5px;
+            text-transform: uppercase;
+        }
+    }
+    .benifit{
+        @include display-flex-just-align(flex, column, center, center);
+        margin: 1.5rem 1rem;
+        span{
+            border-top: 1px solid gray;
+            padding: 0.4rem ;
+            font-size: 12.5px;
+            text-transform: uppercase;
+        }
+    }
+    .option-submit{
+        @include display-just(flex, center);
+        button{
+            // border: none;
+            // border-radius: 3px;
+            // background-color: #ffc155;
+            // color: white;   
+            // outline: none;
+            // padding: 8px 15px;
+            // text-transform: uppercase;
+            // width: 8rem;
+            @include buttom();
+        }
+    }
+    &::nth-child(2){
+        background-color: #709dca;
+        transform: scale(1.1,1.2);
+        border-radius: 3px;
+    }
+    &:hover::nth-child(1) + .option{
+        background-color: #709dca;
+        transform: scale(1.1,1.2);
+        border-radius: 3px;
+    }
+}
+// .option-active{
+//     background-color: #709dca;
+//     transform: scale(1.1,1.2);
+//     border-radius: 3px;
+// }
+@include mobile{
+    .price-option{
+        @include display-flex-just-bg_color(row, center, $bg);
+        display: block;
+        align-items: center;
+        margin: 2rem 15% 5rem;
+        padding: 0;
+        .option{
+            @include container(column, 23rem, 100%);
+            background-color: $bg;
+            color: rgb(196, 194, 194);
+            flex-grow: 1;
+            margin-bottom: 0.5rem;
+            .display-3{
+                @include display-just(flex, center);
+                font-weight: 50;
+                text-transform: uppercase;
+            }
+            .price{
+                @include display-flex-just-align(flex, column, center, center);
+                .price-icon{  
+                    @include display-flex-just(flex, row, center);
+                    color: #ffc155;
+                    .fa-dollar-sign{
+                        font-size: 1.5rem;
+                    }
+                    span{
+                        font-size: 3.5rem;
+                        font-weight: 300;
+                    }
+                }
+                span{
+                    @include display-flex-just(flex, row, center);
+                    font-size: 12.5px;
+                    text-transform: uppercase;
+                }
+            }
+            .benifit{
+                @include display-flex-just-align(flex, column, center, center);
+                margin: 1.5rem 1rem;
+                span{
+                    border-top: 1px solid gray;
+                    padding: 0.4rem ;
+                    font-size: 12.5px;
+                    text-transform: uppercase;
+                }
+            }
+            .option-submit{
+                @include display-just(flex, center);
+                button{
+                    // border: none;
+                    // border-radius: 3px;
+                    // background-color: #ffc155;
+                    // color: white;   
+                    // outline: none;
+                    // padding: 8px 15px;
+                    // text-transform: uppercase;
+                    // width: 8rem;
+                    @include buttom();
+                }
+            }
+            &::nth-child(2){
+                background-color: #709dca;
+                transform: scale(1.1,1.2);
+                border-radius: 3px;
+            }
+            &:hover::nth-child(1) + .option{
+                background-color: #709dca;
+                transform: scale(1.1,1.2);
+                border-radius: 3px;
+            }
+        }
+    }
+}

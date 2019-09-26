@@ -437,7 +437,7 @@
     width: 90%;
   }
   .map-address .address .address-info img {
-    width: 52.5%;
+    width: 45%;
     position: relative;
   }
   .map-address .address .address-info p {
@@ -448,8 +448,8 @@
     margin: 0;
   }
   .map-address .address .logo {
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 2rem;
+    width: 2rem;
   }
 }
 

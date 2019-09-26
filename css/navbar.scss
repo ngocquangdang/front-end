@@ -3,6 +3,9 @@ nav{
     height: 4.5rem;
     background: #5b78c7;
     display: flex;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
 }   
 
 .navbar-header{
@@ -23,7 +26,7 @@ nav{
     margin-left: auto;  
     margin-right: 15%;  
 
-    li{
+    a{
         @include li();
         color: white;
         &:hover {
@@ -64,6 +67,7 @@ nav{
         position: fixed;
         background: #5b78c7;
         padding: 0;
+        
         height: 50vh;
         width: 100%;
         flex-direction: column;
@@ -76,7 +80,7 @@ nav{
             clip-path: circle(1000px at 100% -10%);
             pointer-events: all;
         }
-        li{
+        a{
             opacity: 0;
             font-size: 0.8rem;
             margin-bottom: 0.3rem;
@@ -120,7 +124,8 @@ nav{
     }
     nav{
         position: relative;
-        z-index: 10;
+        position: fixed;
+        z-index: 100;
     }
     .toggle {
         position: absolute;
@@ -134,18 +139,19 @@ nav{
         position: fixed;
         background: #5b78c7;
         padding: 0;
-        height: 50vh;
+        top: 5%;
+        height: auto;
         width: 100%;
         flex-direction: column;
-        clip-path: circle(0px at 70% -10%);
+        clip-path: circle(0px at 100% -10%);
         transition: all 1s ease-out;
         pointer-events: none;
         &.responsive{
-            clip-path: circle(1000px at 70% -10%);
+            clip-path: circle(1000px at 100% -10%);
             pointer-events: all;
         }
-        li{
-            opacity: 0;
+        a{
+            opacity: 1;
             font-size: 0.6rem;
             text-align: center;
             &:nth-child(1){
